@@ -41,7 +41,7 @@ export const ListaProvider = ({ children }) => {
     useEffect(() => {
         localStorage.setItem("Lista", JSON.stringify(lista));
         setTag(tag.sort());
-    }, [lista]);
+    }, [lista, tag]);
 
     useEffect(() => {
         localStorage.setItem("counter", counter);

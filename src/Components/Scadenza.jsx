@@ -18,7 +18,7 @@ export function Scadenza({ container, id }) {
     const [hour, setHour] = useState(today.getHours().toString().padStart(2, "0"));
     const [minutes, setMinutes] = useState(today.getMinutes().toString().padStart(2, "0"));
     const [data, setData] = useState(today);
-
+    <span style={{display:"none"}}>{data}</span>
     const [disable, setDisable] = useState(false);
 
     useEffect(() => {

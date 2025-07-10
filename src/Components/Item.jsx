@@ -31,7 +31,7 @@ function Item(props) {
             setPrioritaBool(false);
             setEdit(false);
         }
-    }, [optionOpenId]);
+    }, [optionOpenId, props.id]);
 
     const gestisciOpzioni = () => {
         if (isOptionOpen) {
@@ -56,7 +56,7 @@ function Item(props) {
                 }
             });
         }
-    }, [])
+    }, [lista, props.id, today])
 
     const handlePriority = (id, prio) => {
         setPriority(id, prio);
@@ -123,7 +123,7 @@ function Item(props) {
             </div>
 
 
-            {isOptionOpen && (expiredID != props.id) ? (
+            {isOptionOpen && (expiredID !== props.id) ? (
                 <div className="itemOption">
                     <input type="button" value={"Edit"} onClick={() => {
                         setEdit(!edit);

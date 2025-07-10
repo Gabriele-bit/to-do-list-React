@@ -20,7 +20,7 @@ Notifiche o reminder (se la data è vicina → alert).
 */
 
 function App() {
-  const { lista, aggiungiElemento, counter, rimanenti, tag, deleteAll, deleteExpired } = useContext(ListaContext);
+  const { lista, aggiungiElemento, tag, deleteAll, deleteExpired } = useContext(ListaContext);
   const [item, setItem] = useState("");
   const [added, setAdded] = useState(false);
   const [filtriBool, setFiltriBool] = useState(false);
@@ -53,7 +53,7 @@ function App() {
     }, 600);
 
     return () => clearTimeout(timer);
-  }, [added == true]);
+  }, [added === true]);
 
   const prendiInput = (item) => {
     setItem(item);
