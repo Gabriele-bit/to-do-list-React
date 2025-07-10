@@ -1,0 +1,334 @@
+* {
+  font-size: 20px;
+  box-sizing: border-box;
+  /* evita problemi di sizing */
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.311);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  overflow: hidden;
+  z-index: -1;
+  height: f;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding-bottom: 20px;
+  /* height: 100vh; */
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 5px orange;
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  align-items: center;
+  padding: 30px 20px;
+  gap: 10px;
+  position: relative;
+  user-select: none;
+}
+
+.header h1 {
+  font-family: 'Cursive', sans-serif;
+  font-size: 2.5rem;
+  color: orange;
+  margin: 0;
+}
+
+.motivazionali {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+[class^="motivazionale"] span {
+  font-size: 1rem;
+}
+
+.motivazionale1 {
+  font-style: italic;
+  color: rgb(77, 77, 77);
+}
+
+.motivazionale2 {
+  font-weight: 600;
+  color: #7a7a7a;
+}
+
+.motivazionale3 {
+  opacity: 0.8;
+  color: #c2c2c2;
+}
+
+.motivazionale4 {
+  font-weight: 700;
+  color: #f9f9f9;
+}
+
+input {
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 6px 8px;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: orange;
+  box-shadow: 0 0 5px orange;
+}
+
+
+.header h3 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+
+.inputBarBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputBar {
+  padding: 15px 20px;
+  width: 25%;
+  font-size: 20px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.5s ease;
+}
+
+.inputBar:focus {
+  border-color: orange;
+  background-color: #1e1e1e5d;
+  color: white;
+  box-shadow: 0 0 8px orange;
+}
+
+.inputButtons {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.inputButtons input {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+  color: #333333;
+  width: 120px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inputButtons input:hover {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+
+.lista {
+  width: 100%;
+  justify-items: center;
+  border-top: 1px solid white;
+  padding: 20px 0 100%;
+  margin: 0;
+  min-height: 400px;
+  max-height: 400px;
+  /* o calcolato con calc() */
+  overflow-y: auto;
+}
+
+/* Scrollbar */
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (sfondo della scrollbar) */
+.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Thumb (la parte che scorre) */
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+/* Hover sul thumb */
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Conferma */
+.confirmEdit {
+  display: flex;
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  background-color: #28a745;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.confirmExpire:hover,  .confirmEdit:hover 
+{
+  background-color: #218838;
+}
+
+.tags input[value="Ok"] {
+  margin-bottom: 0;
+}
+
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filtersButton {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: fit-content;
+
+}
+
+.filters span {
+  margin-right: 10px;
+}
+
+.filters select {
+  border-radius: 20px;
+}
+
+.filters select:focus {
+  border: 1px solid orange;
+}
+
+.filters input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.filters option {
+  background-color: white;
+  text-align: center;
+}
+
+.filterClean {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.filterButton {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.filterButton:hover {
+  transform: rotate(-18deg);
+}
+
+.deleteExpired:hover {
+  color: red;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 1rem;
+  }
+
+  .motivazionali {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  [class^="motivazionale"] {
+    flex: 1;
+    text-align: center;
+  }
+
+  [class^="motivazionale"] span {
+    font-size: 0.8rem;
+  }
+
+  .inputBar {
+    width: 90%;
+  }
+
+  .filters {
+    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filters span {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+
+}

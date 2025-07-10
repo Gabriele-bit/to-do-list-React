@@ -1,0 +1,59 @@
+hr {
+    width: 100%;
+}
+
+.containerTags {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+.tags {
+    background-color: white;
+    color: #333333;
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+    flex-direction: column;
+    border: 1px solid black;
+    z-index: 999;
+    border: 1px solid rgb(137, 137, 137);
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 90%;
+}
+
+.tags input {
+    color: #333333;
+}
+
+input[type="radio"] {
+  accent-color: orange;
+  margin: 10px;
+}
+
+@media (max-width: 600px )  {
+    .tags{
+        position: sticky;
+        width: 100%;
+        padding: 15px;
+        
+    }
+    .containerTags{
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;  
+    }
+
+    .containerTags  label{
+        font-size: 20px;
+    }
+
+    .containerTags span label{
+        font-size: 0.7rem;
+    }
+}

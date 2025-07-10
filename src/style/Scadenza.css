@@ -1,0 +1,159 @@
+/* Contenitore principale centrato */
+.struttura {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 10px;
+    box-shadow: 0 0 6px rgba(184, 198, 35, 0.5);
+    width: 40vw;
+
+    border-radius: 16px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Pulsante chiusura */
+.x {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #d9534f;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.x:hover {
+    color: #a94442;
+}
+
+/* Sezione scadenza */
+.scadenza {
+    display: flex;
+    width: 100%;
+    /* padding: 2rem 3rem; */
+}
+
+/* Contenitore data */
+.data {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Select generici */
+.year,
+.month,
+.day {
+    width: 60%;
+}
+
+.year select,
+.month select,
+.day select {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Contenitore orario */
+.structureOrario {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ore e minuti */
+.strutturaOre,
+.strutturaMinuti {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+.duePunti {
+    align-items: flex-end;
+}
+
+/* Pulsanti orario */
+.pulsantiOrario {
+    display: flex;
+    /* gap: 20px; */
+    background-color: transparent;
+    border: none;
+}
+
+/* Rappresentazione orario */
+.orario {
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* margin: 20px 0; */
+}
+
+.stileOrario {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Controlli + e - */
+.controlliGIU {
+    display: flex;
+    /* gap: 20px; */
+}
+
+/* Pannello sfondo opaco */
+.panel {
+    background-color: rgba(20, 20, 20, 0.136);
+    position: fixed;
+    /* fixed per coprire tutto lo schermo anche in scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmExpire {
+      background-color: #28a745;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      color:  white;
+      font-size: 20px;
+      border-radius: 20px;
+}
+
+
+hr {
+    border-color: #cccccc65;
+}
+
+@media (max-width: 600px) {
+    .struttura {
+        width: 100%;
+        padding: 0;
+    }
+
+}
